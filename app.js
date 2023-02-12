@@ -22,7 +22,6 @@ operator.forEach((button) =>
   button.addEventListener('click', () => setOperator(button.textContent))
 )
 
-equals.addEventListener('click', setEqual);
 
 function appendNumber(number) {
     if (display.textContent === '0')
@@ -30,6 +29,7 @@ function appendNumber(number) {
     display.textContent += number
   } 
 
+equals.addEventListener('click', setEqual)
 clearDisplay.addEventListener('click', clear)
 erase.addEventListener('click', eraseinput)
 decimal.addEventListener('click', point)
@@ -54,6 +54,7 @@ function resetScreen() {
 }
 
 function setOperator(button){
+    if (currentOperation !== null) setEqual()
     firstOperand = display.textContent
     lastOperationDisplay.textContent = `${firstOperand} ${button}` 
     currentOperation = button

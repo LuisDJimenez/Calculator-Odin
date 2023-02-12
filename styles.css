@@ -6,6 +6,8 @@ body {
     width: 400px;
     margin: 5rem auto;
     text-align: center;
+    background-color: lightseagreen;
+    padding: 3rem;
   }
 
   #display, #lastOperationDisplay {
