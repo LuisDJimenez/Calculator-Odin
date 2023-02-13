@@ -22,6 +22,7 @@ body {
     color: black;
   }
 
+
   #clear, #delete {
     width: fit-content;
     min-width: 50px;

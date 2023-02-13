@@ -64,7 +64,7 @@ function setOperator(button){
 function setEqual() {
     secondOperand = display.textContent
     if(firstOperand == ''){
-        return ''
+        return `0 ${currentOperation}`
     }else{
     lastOperationDisplay.textContent = `${firstOperand} ${currentOperation} ${secondOperand}` 
     display.textContent = round(operate(currentOperation, firstOperand, secondOperand))
