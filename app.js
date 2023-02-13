@@ -63,12 +63,13 @@ function setOperator(button){
 
 function setEqual() {
     secondOperand = display.textContent
-    if(currentOperation === '÷' && secondOperand === '0') alert('You cant divide by 0!')
+    if(currentOperation === '÷' && secondOperand === '0') alert( 'You cant divide by 0!')
     if(firstOperand == ''){
         return `0 ${currentOperation}`
     }else{
     lastOperationDisplay.textContent = `${firstOperand} ${currentOperation} ${secondOperand}` 
     display.textContent = round(operate(currentOperation, firstOperand, secondOperand))
+    currentOperation = null
     }
 }
 
